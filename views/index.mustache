@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>To Do Home Page</title>
-    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
     <header>
@@ -11,13 +11,18 @@
     </header>
 
     <main>
-
-      <div class="add-todo-container">
-        <input type="text" name="add-todo" placeholder="Add a todo...">
-        <input type="submit" name="submit" value="Add todo">
-      </div>
+      <form class="add-todo-container" action="/" method="post">
+        <input type="text" name="task" placeholder="Add a todo...">
+        <input type="submit" name="" value="Add todo">
+      </form>
 
       <div class="mark-complete-container">
+        {{#todos}}
+        <form class="single-item" action="/completed" method="post">
+          <input type="submit" name="" value="Mark complete">
+          <input type="text" name="complete" value="{{task}}" readonly>
+        </form>
+        {{/todos}}
         <!-- Inject data -->
 
         <!-- <div class="single-item">
@@ -40,7 +45,9 @@
         <h2>Your Completed Tasks</h2>
         <div class="completed-items">
           <!-- Inject data -->
-
+          {{#completed}}
+          <li>{{complete}}</li>
+          {{/completed}}
           <!-- <li>Item 0</li>
           <li>Item 1</li>
           <li>Item 2</li>
@@ -48,7 +55,7 @@
           <li>Item 4</li> -->
         </div>
       </div>
-      
+
     </main>
 
 
