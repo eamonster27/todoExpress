@@ -1,0 +1,57 @@
+body {
+  background-color: #bdc3c7;
+  margin: 0px;
+  padding: 0px;
+  font-family: fantasy;
+}
+
+header {
+  text-align: center;
+  background-color: #2ecc71;
+  padding: .05px;
+  color: #3498db;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.add-todo-container {
+  margin: 10px 0px 20px 0px;
+}
+
+.add-todo-container > input[type='submit']{
+  border-style: none;
+  background-color: #27ae60;
+  width: 75px;
+  height: 28px;
+}
+
+.add-todo-container > input[type='text']{
+  border-style: none;
+  width: 250px;
+  height: 25px;
+  padding-left: 5px;
+}
+
+.mark-complete-container {
+  display: flex;
+  flex-flow: column nowrap;
+  color: #e74c3c;
+}
+
+.single-item > input[type='submit'] {
+  border-style: none;
+  background-color: #27ae60;
+  width: 100px;
+}
+
+.completed-tasks-container {
+  color: #95a5a6;
+}
+
+.completed-items > li{
+  list-style: none;
+}
